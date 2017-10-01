@@ -1,0 +1,13 @@
+{
+    "author_name": "Your Name",
+    "author_email": "your_email@somewhere.com",
+
+    "package_name": "json-transformations-cookiecutter",
+    "package_version": "0.0",
+    "package_description": "Recommended cookiecutter template for json-transformations projects",
+    "package_url": "https://github.com/json-transformations/json-transformations-cookiecutter",
+    
+    "readme_pypi_badge": true,
+    "readme_travis_badge": true,
+    "readme_travis_url": ""
+}
