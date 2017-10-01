@@ -30,15 +30,6 @@ The decisions `json-transformations-cookiecutter` makes should all be explained 
 * **As few README files as possible**
   Additional README files (AUTHORS, CHANGELOG, etc) should be left to the user to create when necessary.
 
-### `setup.py`
-
-* **Use setuptools**
-  It's the standard packaging library for Python. `distribute` has merged back into `setuptools`, and `distutils` is less capable.
-* **setup.py should not import anything from the package**
-  When installing from source, the user may not have the packages dependencies installed, and importing the package is likely to raise an `ImportError`.
-* **setup.py should be the canonical source of package dependencies**
-  There is no reason to duplicate dependency specifiers (i.e. also using a `requirements.txt` file). See the testing section below for testing dependencies.
-
 ### Testing
 
 * **Use [Tox](https://tox.readthedocs.io) to manage test environments**
