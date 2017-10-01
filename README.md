@@ -38,3 +38,5 @@ The decisions `json-transformations-cookiecutter` makes should all be explained 
   This can be changed easily, though pytest is a easier, more powerful test library and runner than the standard library's unittest.
 * **Define testing dependencies in `tox.ini`**
   Avoid duplicating dependency definitions, and use `tox.ini` as the canonical description of how the unittests should be run.
+* **Define `requirements-dev.txt` for standalone development testing**
+  Modify as required to set up a testing environment for virtualenvs.
