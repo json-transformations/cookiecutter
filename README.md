@@ -1,4 +1,4 @@
-json-transformations-cookiecutter
+json-transformations/cookiecutter
 ==============================
 
 Recommended [cookiecutter](https://github.com/audreyr/cookiecutter) template for [json-transformations](https://github.com/json-transformations) projects.
@@ -7,19 +7,19 @@ Usage
 -----
 
     pip install cookiecutter
-    git clone https://github.com/json-transformations/json-transformations-cookiecutter.git
-    cookiecutter json-transformations-cookiecutter/
+    git clone https://github.com/json-transformations/cookiecutter
+    cookiecutter cookiecutter/
 
 You should then change the classifiers in `{{ package_name }}/setup.py` - it is assumed that the project will run on the latest versions of Python 3 only, but also consider testing for Python 2.7. Remove any classifiers that do not apply. The full list of PyPI classifiers can be found [here](https://pypi.python.org/pypi?:action=list_classifiers).
 
 * Fill out the README.
 * The LICENSE will default to the json-transformations LICENSE.
-* Verify the `.travis.yml` file is accurate.
+* Verify the `.travis.yml` file is accurate, as well all other files.
 
 Explanation
 -----------
 
-The decisions `json-transformations-cookiecutter` makes should all be explained here.
+The decisions `json-transformations/cookiecutter` makes should all be explained here.
 
 ### README
 
