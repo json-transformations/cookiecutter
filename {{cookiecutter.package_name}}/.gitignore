@@ -3,7 +3,6 @@
 *.pyc
 build/*
 dist
-docs/_build
-docs/config/scratchpad.rst
 .coveralls.yml
+.coverage
 .tox/*
