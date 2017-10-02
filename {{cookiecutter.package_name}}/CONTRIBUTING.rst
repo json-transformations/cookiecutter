@@ -1,5 +1,5 @@
 ###########################
-Contributing to JSON Config
+Contributing to {{cookiecutter.package_name}}
 ###########################
 
 Welcome!  Your contributions are valued; bug reports, code contributions,
