@@ -1,24 +1,32 @@
 import ast
 import re
-import setuptools
+from setuptools import setup, find_packages
 from pip.req import parse_requirements
 
-install_reqs = parse_requirements('requirements.txt', session=False)
-reqs = [str(i.req) for i in install_reqs]
-
+# get __version__ in __init__.py
 _version_re = re.compile(r'__version__\s+=\s+(.*)')
 with open('{{cookiecutter.package_name}}/__init__.py', 'rb') as f:
     version = str(ast.literal_eval(_version_re.search(
         f.read().decode('utf-8')).group(1)))
 
+# load README.rst
 with open('README.rst', 'r', encoding='utf-8') as f:
     readme = f.read()
 
+# load requirements.txt
+requirements = parse_requirements('requirements.txt', session=False)
+reqs = [str(i.req) for i in requirements]
 
-setuptools.setup(
+# load requirements-dev.txt
+requirements_dev = parse_requirements('requirements-dev.txt', session=False)
+reqs = [str(i.req) for i in requirements_dev]
+
+
+setup(
     name="{{ cookiecutter.package_name }}",
     version=version,
     url="{{ cookiecutter.package_url }}",
+    keywords=[],
 
     author="{{ cookiecutter.author_name }}",
     author_email="{{ cookiecutter.author_email }}",
@@ -26,24 +34,25 @@ setuptools.setup(
     description="{{ cookiecutter.package_description }}",
     long_description=readme,
 
-    packages=setuptools.find_packages(),
+    packages=find_packages(include=['{{ cookiecutter.project_slug }}']),
+    include_package_data=True,
+    zipsafe=False,
 
     classifiers=[
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
+        'Programming Language :: Python :: 2',
         'Programming Language :: Python :: 3',
+        'Topic :: Utilities',
     ],
-
-    install_requires=reqs,
-
-    extras_require={
-        'colors': ['colorama'],
-        'json_higlighting': ['pygments']
-    },
-
+    install_requires=requirements,
+    test_suite='tests',
+    test_requires=requirements_dev,
+    setup_requires=['pytest-runner'],
     entry_points={
-        'console_scripts': ['{{ cookiecutter.package_name }}='
-                            '{{ cookiecutter.package_name }}.cli:main']
+        'console_scripts': [
+            '{{ cookiecutter.package_name }}='
+            '{{ cookiecutter.package_name }}.cli:main']
     },
 )
 
