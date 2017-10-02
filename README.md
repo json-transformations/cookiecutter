@@ -3,10 +3,6 @@ json-transformations-cookiecutter
 
 Recommended [cookiecutter](https://github.com/audreyr/cookiecutter) template for [json-transformations](https://github.com/json-transformations) projects.
 
-Credits
--------
-Modified from [cookiecutter-pypackage-minimal](https://github.com/kragniz/cookiecutter-pypackage-minimal) by [kragniz](https://github.com/kragniz)
-
 Usage
 -----
 
@@ -14,7 +10,7 @@ Usage
     git clone https://github.com/json-transformations/json-transformations-cookiecutter.git
     cookiecutter json-transformations-cookiecutter/
 
-You should then change the classifiers in `{{ package_name }}/setup.py` - it is assumed that the project will run on the latest versions of Python 3 only, but testing for Python 2.7 will should also occur. Remove any classifiers that do not apply. The full list of PyPI classifiers can be found [here](https://pypi.python.org/pypi?:action=list_classifiers).
+You should then change the classifiers in `{{ package_name }}/setup.py` - it is assumed that the project will run on the latest versions of Python 3 only, but also consider testing for Python 2.7. Remove any classifiers that do not apply. The full list of PyPI classifiers can be found [here](https://pypi.python.org/pypi?:action=list_classifiers).
 
 * Fill out the README.
 * The LICENSE will default to the json-transformations LICENSE.
