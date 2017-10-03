@@ -19,7 +19,7 @@ reqs = [str(i.req) for i in requirements]
 
 # load requirements-dev.txt
 requirements_dev = parse_requirements('requirements-dev.txt', session=False)
-reqs = [str(i.req) for i in requirements_dev]
+reqs_dev = [str(i.req) for i in requirements_dev]
 
 
 setup(
@@ -45,9 +45,9 @@ setup(
         'Programming Language :: Python :: 3',
         'Topic :: Utilities',
     ],
-    install_requires=requirements,
+    install_requires=reqs,
     test_suite='tests',
-    test_requires=requirements_dev,
+    test_requires=reqs_dev,
     setup_requires=['pytest-runner'],
     entry_points={
         'console_scripts': [
