@@ -5,6 +5,7 @@
     "package_name": "json-transformations-cookiecutter",
     "package_description": "Recommended cookiecutter template for json-transformations projects",
     "package_url": "https://github.com/json-transformations/json-transformations-cookiecutter",
+    "package_version": "0.0",
 
     "tox_envlist": "py27,py33,py34,py35,py36",
 
