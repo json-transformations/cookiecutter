@@ -37,4 +37,4 @@ Authors
 
 Credits
 -------
-* Brian Peterson `bpeterso2000 <https://github.com/bpeterso2000>`_, creator of JSON Transformations `<https://github.com/json-transformations>`_
+Brian Peterson `bpeterso2000 <https://github.com/bpeterso2000>`_, creator of `JSON Transformations <https://github.com/json-transformations>`_
